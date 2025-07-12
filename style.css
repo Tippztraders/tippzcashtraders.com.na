@@ -1,0 +1,368 @@
+/* === BODY & BASE STYLES === */
+body {
+  font-family: Arial, sans-serif;  /* Sets font for entire page */
+  margin: 0;                      /* Removes default browser margin */
+  background: #f4f4f4;            /* Light gray background color */
+}
+
+/* === COMPANY NAME TEXT WITH STROKE EFFECT === */
+.stroked-text {
+  color: #728FCE;                   /* White text */
+  text-shadow:                   /* Black shadows on all 4 sides for stroke effect */
+    -1px -1px 0 #000,
+    1px -1px 0 #000,
+    -1px 1px 0 #000,
+    1px 1px 0 #000;
+  font-size: 2em;                /* Large font size */
+  font-weight: bold;             /* Bold text */
+  margin: 0.5em 0;               /* Vertical spacing */
+  text-align: center;            /* Center aligned */
+}
+
+/* === BANNER HEADER (HERO IMAGE CONTAINER) === */
+.banner-header {
+  max-width: 720px;              /* Max width to limit banner size */
+  margin: 0 auto;                /* Center horizontally */
+  overflow: hidden;              /* Hide overflow content */
+}
+
+/* HERO IMAGE ITSELF */
+.banner-header img {
+  width: 100%;                  /* Image fills container width */
+  height: auto;                 /* Maintain aspect ratio */
+  object-fit: contain;          /* Show entire image, no cropping */
+  border-radius: 0;             /* No rounded corners */
+  display: block;               /* Remove bottom whitespace */
+  max-height: 100%;             /* Prevent oversized height */
+}
+
+/* === NAVIGATION & FOOTER CONTAINERS === */
+.nav-below-banner,
+footer {
+  max-width: 720px;             /* Limit width for nav & footer */
+  margin: 0 auto;               /* Center horizontally */
+  padding-left: 12px;           /* Left padding */
+  padding-right: 12px;          /* Right padding */
+}
+
+/* NAVIGATION BLOCK BELOW BANNER */
+.nav-below-banner {
+  background: #fff;             /* White background */
+  padding: 1em 0 0.5em 0;      /* Vertical padding */
+  text-align: center;           /* Center text */
+  min-height: 50px;            /* Ensure minimum height */
+}
+
+/* NAVIGATION LINKS */
+.nav-below-banner .nav a {
+  margin: 0 10px;               /* Horizontal spacing between links */
+  color: #333;                 /* Dark gray text */
+  text-decoration: none;        /* Remove underline */
+  font-weight: bold;            /* Bold links */
+}
+
+/* === MAIN CONTENT where COMPPANY NAME SEATS === */
+.container {
+  max-width: 720px;             /* Limit width */
+  margin: 0 auto;               /* Center horizontally */
+  padding: 0 12px;              /* Side padding */
+}
+
+/* === HERO SECTION (TEXT BELOW HEADER) === */
+.hero {
+  text-align: center;           /* Center content */
+  padding: 1em 0.5em;             /* Vertical and horizontal padding */
+  background: white;            /* White background */
+}
+
+/* CALL TO ACTION BUTTON */
+.cta-button {
+  background: yellow;           /* Yellow background */
+  color: black;                 /* Black text */
+  text-decoration: none;        /* No underline */
+  padding: 0.75em 1.5em;        /* Padding around text */
+  font-weight: bold;            /* Bold text */
+  border-radius: 5px;           /* Rounded corners */
+}
+
+/* === FEATURED PRODUCTS SECTION === */
+.featured {
+  padding: 1em 0.5em;             /* Padding */
+  text-align: center;           /* Center heading */
+}
+
+/* GRID CONTAINER FOR PRODUCTS */
+.product-grid {
+  display: grid;                /* Use grid layout */
+  grid-template-columns: 1fr;  /* Single column */
+  gap: 1.5em;                  /* Gap between items */
+}
+
+/* INDIVIDUAL PRODUCT CARD */
+.product-card {
+  background: white;            /* White background */
+  border: 1px solid #ccc;       /* Light gray border */
+  padding: 1em;                 /* Inner padding */
+  border-radius: 8px;           /* Rounded corners */
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1); /* Subtle shadow */
+  text-align: center;           /* Center content */
+  position: relative;           /* For positioning child elements */
+}
+
+/* PRODUCT IMAGE */
+.product-card img {
+  width: 100%;                 /* Full card width */
+  cursor: pointer;             /* Pointer cursor on hover */
+  border-radius: 8px;           /* Rounded corners */
+}
+
+/* PRICE LABEL */
+.price {
+  font-weight: bold;            /* Bold font */
+  margin-top: 0.5em;            /* Spacing from above */
+}
+
+/* FADED BADGE (e.g., Sale or Special) */
+.faded-badge {
+  background: rgba(255, 0, 0, 0.1); /* Transparent red bg */
+  color: red;                  /* Red text */
+  padding: 0.3em 0.6em;        /* Padding */
+  display: inline-block;
+  margin-top: 0.3em;           /* Spacing */
+  border-radius: 4px;           /* Rounded corners */
+  text-align: left;
+}
+
+/* STATUS TEXT (e.g., condition) */
+.status {
+  font-size: 0.9em;             /* Slightly smaller text */
+  margin-top: 0.3em;
+}
+
+/* LIKE (HEART) SECTION */
+.like-section {
+  margin-top: 0.5em;
+  position: relative;
+}
+
+/* HEART ICON */
+.fa-heart {
+  color: #ccc;                  /* Gray heart */
+  cursor: pointer;              /* Pointer cursor */
+  font-size: 1.5em;             /* Size */
+  transition: transform 0.3s ease; /* Smooth transform */
+  user-select: none;            /* Prevent text selection */
+}
+
+/* HEART ICON WHEN LIKED */
+.fa-heart.liked {
+  color: red;                   /* Red heart */
+}
+
+/* LIKE COUNT TEXT */
+.like-count {
+  margin-left: 5px;
+  font-weight: bold;
+}
+
+/* BURST HEART ANIMATION */
+.burst-heart {
+  position: absolute;
+  pointer-events: none;         /* Ignore mouse events */
+  user-select: none;            /* Prevent text selection */
+  width: 20px;
+  height: 20px;
+  background: red;
+  clip-path: polygon(
+    50% 0%, 61% 12%, 75% 12%, 85% 22%, 85% 35%, 75% 45%, 50% 75%, 25% 45%, 15% 35%, 15% 22%, 25% 12%, 39% 12%
+  );
+  opacity: 0.8;
+  animation: burst 0.8s forwards;
+  z-index: 10;
+}
+
+/* BURST HEART KEYFRAME ANIMATION */
+@keyframes burst {
+  0% {
+    opacity: 0.8;
+    transform: translate(0, 0) scale(1);
+  }
+  100% {
+    opacity: 0;
+    transform: translate(calc(var(--x) * 40px), calc(var(--y) * -40px)) scale(0.5);
+  }
+}
+
+/* WHATSAPP BUTTON */
+.whatsapp-button {
+  display: inline-block;
+  margin-top: 0.5em;
+  background: #25d366;           /* WhatsApp green */
+  color: white;
+  padding: 0.5em 1em;
+  border-radius: 5px;
+  text-decoration: none;
+  font-weight: bold;
+  user-select: none;
+}
+
+/* === FOOTER STYLES === */
+footer {
+  background: #000000;           /* Black background */
+  color: #ccc;                   /* Light gray text */
+  padding: 2em 1em;              /* Padding */
+  text-align: center;
+}
+
+footer h4 {
+  color: #ffcc00;                /* Yellow headings */
+}
+
+footer ul {
+  list-style: none;              /* Remove bullet points */
+  padding: 0;
+}
+
+footer a {
+  color: #ccc;
+  text-decoration: none;
+}
+
+/* DONATION SECTION */
+.donation-section {
+  background-color: #f0fff0;     /* Light green background */
+  padding: 1.5em 1em 2em 1em;
+  border-radius: 8px;
+  max-width: 600px;
+  margin: 2em auto;
+  text-align: center;
+}
+
+.donation-section h3 {
+  margin-top: 0;
+  margin-bottom: 0.5em;
+}
+
+.donation-section p {
+  margin-top: 0;
+  margin-bottom: 1em;
+  font-style: italic;
+  color: #333;
+}
+
+.donation-gallery {
+  margin-top: 1em;
+}
+
+/* DONATION GRID */
+.donation-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr); /* Two columns */
+  gap: 1em;
+}
+
+.donation-item {
+  background: white;
+  padding: 1em;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  text-align: center;
+}
+
+.donation-item img {
+  width: 100%;
+  cursor: pointer;
+  border-radius: 8px;
+  height: auto;
+}
+
+.donation-label {
+  text-align: center;
+  font-weight: bold;
+  color: #333;
+  font-size: 0.9em;
+  margin-top: 0.5em;
+}
+
+/* FOOTER HORIZONTAL RULE */
+footer hr {
+  margin-top: 2em;
+  border: 0;
+  border-top: 1px solid #444;
+}
+
+/* === LIGHTBOX (IMAGE POPUP) === */
+.lightbox {
+  display: none;                /* Hidden by default */
+  position: fixed;
+  top: 0; left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(0,0,0,0.9); /* Dark transparent background */
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  z-index: 9999;
+}
+
+.lightbox img {
+  max-width: 90%;
+  max-height: 75vh;
+  border-radius: 10px;
+  user-select: none;
+}
+
+/* CLOSE BUTTON FOR LIGHTBOX */
+.close-btn {
+  position: absolute;
+  top: 20px; right: 30px;
+  color: white;
+  font-size: 2em;
+  cursor: pointer;
+  user-select: none;
+}
+
+/* DOT INDICATORS BELOW LIGHTBOX IMAGE */
+.lightbox-dots {
+  margin-top: 1em;
+  display: flex;
+  gap: 10px;
+}
+
+.lightbox-dots div {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: #666;
+  cursor: pointer;
+}
+
+.lightbox-dots .active {
+  background: #fff;
+}
+
+/* LIGHTBOX HINT TEXT */
+.lightbox-hint {
+  margin-top: 0.8em;
+  color: #fff;
+  font-size: 1em;
+  user-select: none;
+}
+
+/* DISCLAIMER BUTTON */
+.disclaimer-btn {
+  margin-top: 10px;
+  background-color: transparent;
+  color: yellow;
+  border: none;
+  padding: 8px 16px;
+  font-weight: bold;
+  cursor: pointer;
+  border-radius: 6px;
+  transition: none;
+}
+
+.disclaimer-btn:hover {
+  background-color: transparent;
+  color: yellow;
+}
