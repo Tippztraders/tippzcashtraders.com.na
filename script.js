@@ -14,7 +14,7 @@ const products = [
     condition: "Pre-Loved"
   },
   {
-    images: ["PH3a.jpg", "PH3b.jpg", "PH3c.jpg"],
+    images: ["PH3a.jpg", "PH3b.jpg"],
     name: "Electrical Frying Pan",
     price: "N$450",
     condition: "Pre-Loved"
@@ -57,7 +57,7 @@ const products = [
   },
   {
     images: ["PH10a.jpg", "PH10b.jpg", "PH10c.jpg"],
-    name: "Event Tables Combo:Kickstart your dream business today;Was:3550 for both tables",
+    name: "Event Tables Combo: Kickstart your dream business today; Was:3550 for both tables",
     price: "Now only: N$2,900",
     condition: "Pre-Loved"
   },
