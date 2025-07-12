@@ -262,7 +262,7 @@ function showLoveText(targetIcon) {
 function sendWhatsappMessage(e, productIndex) {
   e.preventDefault();
   const productName = products[productIndex].name;
-  const message = encodeURIComponent(`Hello, I am interested in your product: "${productName}". Please provide more details.`);
+  const message = encodeURIComponent(`Hello Tippz, I am interested in your product: "${productName}". Please provide more details.`);
   const whatsappNumber = "+264817859603";
   const url = `https://wa.me/${whatsappNumber}?text=${message}`;
   window.open(url, "_blank");
