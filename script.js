@@ -11,7 +11,8 @@ const products = [
     images: ["PH2.jpg"],
     name: "32L Samsung Microwave",
     price: "N$950",
-    condition: "Pre-Loved"
+    condition: "Pre-Loved",
+    // status: "SOLD"
   },
   {
     images: ["PH3a.jpg", "PH3b.jpg"],
@@ -98,7 +99,7 @@ function renderProducts() {
       <h4>${product.name}</h4>
       <p class="price">${product.price}</p>
       <span class="condition faded-badge">${product.condition}</span>
-      <p class="status">In Stock</p>
+      <p class="status ${product.status === 'SOLD' ? 'sold' : ''}">${product.status || "In Stock"}</p> 
       <div class="like-section">
         <i class="fas fa-heart" onclick="toggleLike(this, ${i})"></i>
       </div>
