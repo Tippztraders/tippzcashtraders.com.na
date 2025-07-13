@@ -5,18 +5,20 @@ body {
   background: #f4f4f4;            /* Light gray background color */
 }
 
-/* === COMPANY NAME TEXT WITH STROKE EFFECT === */
+/* === COMPANY NAME TEXT WITH STROKE EFFECT (Improved) === */
 .stroked-text {
-  color: #728FCE;                   /* White text */
-  text-shadow:                   /* Black shadows on all 4 sides for stroke effect */
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  color: white;
+  text-shadow: 
     -1px -1px 0 #000,
-    1px -1px 0 #000,
-    -1px 1px 0 #000,
-    1px 1px 0 #000;
-  font-size: 2em;                /* Large font size */
-  font-weight: bold;             /* Bold text */
-  margin: 0.5em 0;               /* Vertical spacing */
-  text-align: center;            /* Center aligned */
+     1px -1px 0 #000,
+    -1px  1px 0 #000,
+     1px  1px 0 #000;
+  font-size: 2.5em;
+  font-weight: 900;
+  text-align: center;
+  margin: 0.8em 0 0.5em 0;
+  letter-spacing: 1px;
 }
 
 /* === BANNER HEADER (HERO IMAGE CONTAINER) === */
