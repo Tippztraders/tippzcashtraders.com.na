@@ -5,19 +5,19 @@ body {
   background: #f4f4f4;            /* Light gray background color */
 }
 
-/* === COMPANY NAME TEXT WITH STROKE EFFECT (Improved) === */
+/* === Refined Company Title Style === */
 .stroked-text {
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-size: 2.5em;
+  font-weight: 900;
   color: white;
   text-shadow: 
     -1px -1px 0 #000,
      1px -1px 0 #000,
     -1px  1px 0 #000,
      1px  1px 0 #000;
-  font-size: 2.5em;
-  font-weight: 900;
   text-align: center;
-  margin: 0.8em 0 0.5em 0;
+  margin: 0.5em 0;
   letter-spacing: 1px;
 }
 
