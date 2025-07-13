@@ -39,13 +39,13 @@ const products = [
     condition: "Trendsetter"
   },
   {
-    images: ["PH7.jpg"],
+    images: ["PH7.png"],
     name: "Office Chair #3",
     price: "N$750",
     condition: "Well-Maintained"
   },
   {
-    images: ["PH8.jpg"],
+    images: ["PH8.png"],
     name: "Office Chair #1",
     price: "N$650",
     condition: "Well-Maintained"
@@ -57,7 +57,7 @@ const products = [
     condition: "Well-Maintained"
   },
   {
-    images: ["PH10a.jpg", "PH10b.jpg", "PH10c.jpg"],
+    images: ["PH10a.png", "PH10b.jpg", "PH10c.jpg"],
     name: "Event Tables Combo: Kickstart your dream business today; Was:3550 for both tables",
     price: "Now only: N$2,900",
     condition: "Pre-Loved"
