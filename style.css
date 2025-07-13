@@ -9,16 +9,17 @@ body {
 .stroked-text {
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   font-size: 2.5em;
-  font-weight: 300;
-  color: white;
-  text-shadow: 
+  font-weight: bold;
+  color: #28a745; /* A strong green */
+  text-shadow:
     -1px -1px 0 #000,
      1px -1px 0 #000,
     -1px  1px 0 #000,
      1px  1px 0 #000;
   text-align: center;
-  margin: 0.5em 0;
-  letter-spacing: 1px;
+  margin: 0.5em auto;
+  letter-spacing: 1.5px;
+  line-height: 1.2;
 }
 
 /* === BANNER HEADER (HERO IMAGE CONTAINER) === */
