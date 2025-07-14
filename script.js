@@ -8,7 +8,7 @@ const products = [
     condition: "Excellent Condition"
   },
   {
-    images: ["PH2sold.jpg"],
+    images: ["PH2sold.png"],
     name: "32L Samsung Microwave",
     price: "N$950",
     condition: "Pre-Loved",
