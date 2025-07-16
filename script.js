@@ -2,9 +2,9 @@
 
 const products = [
   {
-    images: ["PH1.jpg"],
+    images: ["PH1.png"],
     name: "White Office Chair",
-    price: "N$850",
+    price: "N$700",
     condition: "Excellent Condition"
   },
   {
