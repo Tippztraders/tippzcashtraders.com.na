@@ -4,6 +4,7 @@ const products = [
   {
     images: ["PH1.png"],
     name: "White Office Chair",
+    oldPrice: "N$850",  // When you want to show the discount, take the comment line off or put it on not to show
     price: "N$700",
     condition: "Excellent Condition"
   },
