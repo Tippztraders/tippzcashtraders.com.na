@@ -88,6 +88,7 @@ function renderProducts() {
     <div class="product-card" id="item${i + 1}">
       <div class="image-wrapper" style="position: relative;">
         <img src="${product.images[0]}" alt="${product.name}" onclick="openLightbox(${i}, 0)" />
+        ${product.saleBadge ? `<div class="sale-badge">${product.saleBadge}</div>` : ''}
         ${
           product.images.length > 1
             ? `<div class="image-dots" style="position: absolute; bottom: 8px; left: 50%; transform: translateX(-50%); display: flex; gap: 5px;">
@@ -97,7 +98,16 @@ function renderProducts() {
         }
       </div>
       <h4>${product.name}</h4>
-      <p class="price">${product.price}</p>
+
+      ${
+        product.oldPrice
+          ? `<div class="price-centered">
+               <span class="old-price" style="text-decoration: line-through; color: grey; font-size: 0.9em;">Was: ${product.oldPrice}</span>
+               <span class="new-price" style="color: black; font-weight: bold; font-size: 1.2em;">Now: ${product.price}</span>
+             </div>`
+          : `<p class="price">${product.price}</p>`
+      }
+
       <span class="condition faded-badge">${product.condition}</span>
       <p class="status ${product.status === 'SOLD' ? 'sold' : ''}">${product.status || "In Stock"}</p> 
       <div class="like-section">
