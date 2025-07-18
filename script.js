@@ -42,12 +42,14 @@ const products = [
   {
     images: ["PH7.png"],
     name: "Office Chair #3",
+    oldPrice: "N$550",  // When you want to show the discount, take the comment line off or put it on not to show
     price: "N$750",
     condition: "Well-Maintained"
   },
   {
     images: ["PH8.png"],
     name: "Office Chair #1",
+    oldPrice: "N$650",  // When you want to show the discount, take the comment line off or put it on not to show
     price: "N$500",
     condition: "Well-Maintained"
   },
