@@ -1,13 +1,24 @@
 // ✅ This is the swipe image + tap-dot-to-close + desktop arrow support code
 
 const products = [
+
+{
+    images: ["PH1.jpg", "PH1b.jpg", "PH1c.jpg", "PH11d.jpg"],
+    name: "Donkey - Traditional Geyser, 1.5 L",
+    price: "N$2,500.00",
+    condition: "Showroom Quality"
+  },    
+
+  
   {
-    images: ["PH1.png"],
+    images: ["PH15.png"],
     name: "White Office Chair",
     oldPrice: "N$850",  // When you want to show the discount, take the comment line off or put it on not to show
     price: "N$700",
     condition: "Excellent Condition"
   },
+
+  
   {
     images: ["PH2sold.png"],
     name: "32L Samsung Microwave",
@@ -15,6 +26,8 @@ const products = [
     condition: "Pre-Loved",
     status: "SOLD"      // status: "SOLD"
   },
+
+  
   {
     images: ["PH3a.jpg", "PH3b.jpg"],
     name: "Electrical Frying Pan",
