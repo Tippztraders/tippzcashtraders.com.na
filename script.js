@@ -7,6 +7,7 @@ const products = [
     name: "Donkey - Traditional Geyser, 150 L",
     price: "N$2,500.00",
     condition: "Showroom Quality"
+    status: "SOLD"
   },    
 
   
