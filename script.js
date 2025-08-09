@@ -4,7 +4,7 @@ const products = [
 
 {
     images: ["PH1.jpg", "PH1a.jpg", "PH1b.jpg", "PH1c.jpg", "PH1d.jpg"],
-    name: "Donkey - Traditional Geyser, 150 L",
+    name: '<span style="color:grey;">Donkey - Traditional Geyser, 150 L</span>',
     price: "N$2,500.00",
     condition: "Showroom Quality"
     status: "SOLD"
