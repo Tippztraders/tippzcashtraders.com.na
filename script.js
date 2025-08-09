@@ -301,14 +301,6 @@ window.onload = () => {
 };
 
 
-<script>
-  fetch('https://api.countapi.xyz/hit/arroja-imobiliarias-2025/visits')
-    .then(res => res.json())
-    .then(res => {
-      document.getElementById('visits').innerText = res.value;
-    });
-</script>
-
 
 
 
