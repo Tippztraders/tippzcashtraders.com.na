@@ -3,6 +3,16 @@
 const products = [
 
 {
+    images: ["PH16a.png"],
+    name: "Decorative Hat, 75 cm diameter",
+    price: "N$1,650.00",
+    condition: "Showroom Quality",
+    // status: "SOLD"      // status: "SOLD"
+  },    
+
+    
+
+{
     images: ["PH1.jpg", "PH1a.jpg", "PH1b.jpg", "PH1c.jpg", "PH1d.jpg"],
     name: "Donkey - Traditional Geyser, 150 L",
     price: "N$2,500.00",
@@ -10,6 +20,8 @@ const products = [
     status: "SOLD"      // status: "SOLD"
   },    
 
+
+    
   
   {
     images: ["PH15.png"],
