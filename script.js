@@ -40,12 +40,14 @@ const products = [
     name: "Traditional Pot #3",
     price: "N$350",
     condition: "Showroom Quality"
+    status: "SOLD"
   },
   {
     images: ["PH5.jpg"],
     name: "Traditional Pot #2",
     price: "N$250",
     condition: "Showroom Quality"
+    status: "SOLD"
   },
   {
     images: ["PH6a.jpg", "PH6b.jpg", "PH6c.jpg"],
