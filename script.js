@@ -10,6 +10,17 @@ const products = [
     // status: "SOLD"      // status: "SOLD"
   },    
 
+
+{
+    images: ["PH17a.png"],
+    name: "Mirror with Decor, 690 x 540 cm",
+    price: "N$450.00",
+    condition: "Showroom Quality",
+    // status: "SOLD"      // status: "SOLD"
+  },    
+
+
+
     
 
 {
