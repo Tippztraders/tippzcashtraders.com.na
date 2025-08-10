@@ -21,6 +21,17 @@ const products = [
 
 
 
+ {
+    images: ["PH18.png", "PH18a.png", "PH18b.png", "PH18c.png", "PH18d.png"],
+    name: "Harlequin Dolls",
+    price: "N$220.00 for the Set",
+    condition: "Well-Maintained",
+   // status: "SOLD"      // status: "SOLD"
+  },    
+  
+
+
+    
     
 
 {
