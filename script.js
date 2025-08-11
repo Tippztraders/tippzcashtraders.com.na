@@ -7,7 +7,7 @@ const products = [
     name: "Decorative Hat, 75 cm diameter",
     price: "N$1,650.00",
     condition: "Showroom Quality",
-    // status: "SOLD"      // status: "SOLD"
+    status: "SOLD"      // status: "SOLD"
   },    
 
 
