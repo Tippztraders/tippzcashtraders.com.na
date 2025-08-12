@@ -3,7 +3,7 @@
 const products = [
 
 {
-    images: ["PH16a.png"],
+    images: ["PH16.png"],
     name: "Decorative Hat, 75 cm diameter",
     price: "N$1,650.00",
     condition: "Showroom Quality",
