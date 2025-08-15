@@ -64,7 +64,7 @@ footer {
   font-weight: bold;            /* Bold links */
 }
 
-/* === MAIN CONTENT where COMPPANY NAME SEATS === */
+/* === MAIN CONTENT where COMPANY NAME SEATS === */
 .container {
   max-width: 720px;             /* Limit width */
   margin: 0 auto;               /* Center horizontally */
@@ -380,3 +380,4 @@ footer hr {
   background-color: transparent;
   color: yellow;
 }
+
