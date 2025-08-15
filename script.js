@@ -107,7 +107,8 @@ const products = [
     images: ["PH9.jpg"],
     name: "Kitchen Sink",
     price: "N$1,250",
-    condition: "Well-Maintained"
+    condition: "Well-Maintained",
+    status: "SOLD"
   },
   {
     images: ["PH10a.png", "PH10b.jpg", "PH10c.jpg"],
