@@ -120,16 +120,31 @@
 
 <!-- Visitor Counter Badge --> 
  
-<div style="display:inline-flex; align-items:center; font-family:sans-serif; font-size:1rem; color:#555; background:#eee; padding:6px 10px; border-radius:12px; gap:6px; opacity:0.6;">
-  <div>
-    <svg viewBox="0 0 64 64" width="28" height="28">
-      <circle cx="32" cy="32" r="30" fill="#bbb" />
-      <circle cx="32" cy="24" r="10" fill="#eee" />
-      <path d="M16,52 C16,42 48,42 48,52 Z" fill="#eee"/>
-    </svg>
-  </div>
-  <span>123</span>
+<div id="visitor-badge" style="display:inline-flex; align-items:center; font-family:sans-serif; font-size:1rem; color:#555; background:#eee; padding:6px 10px; border-radius:12px; gap:6px; opacity:0.6;">
+  <!-- User icon circle -->
+  <svg viewBox="0 0 64 64" width="28" height="28">
+    <circle cx="32" cy="32" r="30" fill="#bbb" /> <!-- outer circle -->
+    <circle cx="32" cy="24" r="10" fill="#eee" /> <!-- head -->
+    <path d="M16,52 C16,42 48,42 48,52 Z" fill="#eee"/> <!-- shoulders/body -->
+  </svg>
+  <!-- Visitor number -->
+  <span id="visitor-count">0</span>
 </div>
+
+<script>
+  // URL of the Hits counter for your site
+  const hitsUrl = "https://hits.seeyoufarm.com/api/count/incr?url=tippztraders.github.io/tippzcashtraders.com.na";
+
+  fetch(hitsUrl)
+    .then(res => res.json())
+    .then(data => {
+      document.getElementById('visitor-count').textContent = data.value;
+    })
+    .catch(err => {
+      console.error("Error fetching visitor count:", err);
+    });
+</script>
+
 <!-- end of Visitor Counter Badge -->
 
 <br>
@@ -137,6 +152,7 @@
   <script src="script.js"></script>
 </body>
 </html>
+
 
 
 
