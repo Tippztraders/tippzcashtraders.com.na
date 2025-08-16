@@ -128,21 +128,53 @@
     <path d="M16,52 C16,42 48,42 48,52 Z" fill="#eee"/> <!-- shoulders/body -->
   </svg>
   <!-- Visitor number -->
-  <span id="visitor-count">0</span>
+ <div id="visitor-badge" style="display:inline-flex;align-items:center;font-family:sans-serif;font-size:1rem;color:#555;background:#eee;padding:6px 10px;border-radius:12px;gap:6px;opacity:.6;">
+  <!-- User icon circle -->
+  <svg viewBox="0 0 64 64" width="28" height="28" aria-hidden="true">
+    <circle cx="32" cy="32" r="30" fill="#bbb" />
+    <circle cx="32" cy="24" r="10" fill="#eee" />
+    <path d="M16,52 C16,42 48,42 48,52 Z" fill="#eee"/>
+  </svg>
+  <!-- Live visitor number -->
+  <span id="visitor-count" style="opacity:0;transition:opacity .4s;">0</span>
 </div>
 
 <script>
-  // URL of the Hits counter for your site
-  const hitsUrl = "https://hits.seeyoufarm.com/api/count/incr?url=tippztraders.github.io/tippzcashtraders.com.na";
+  // Your site to track:
+  const TARGET_URL = "https://tippztraders.github.io/tippzcashtraders.com.na";
 
-  fetch(hitsUrl)
-    .then(res => res.json())
-    .then(data => {
-      document.getElementById('visitor-count').textContent = data.value;
-    })
-    .catch(err => {
-      console.error("Error fetching visitor count:", err);
-    });
+  // Hits badge (returns SVG with "today / total"):
+  const badgeUrl =
+    `https://hits.seeyoufarm.com/api/count/incr/badge.svg?url=${encodeURIComponent(TARGET_URL)}&title=hits&edge_flat=true`;
+
+  // Try a couple of simple CORS proxies (or replace with your own endpoint):
+  const proxies = [
+    u => `https://corsproxy.io/?${encodeURIComponent(u)}`,
+    u => `https://api.allorigins.win/raw?url=${encodeURIComponent(u)}`
+  ];
+
+  (async () => {
+    const out = document.getElementById("visitor-count");
+    let svgText = null;
+
+    for (const wrap of proxies) {
+      try {
+        const res = await fetch(wrap(badgeUrl), { cache: "no-store" });
+        if (!res.ok) continue;
+        const txt = await res.text();
+        if (txt.includes("<svg")) { svgText = txt; break; }
+      } catch (_) {}
+    }
+
+    if (!svgText) { out.textContent = "N/A"; return; }
+
+    // The SVG contains "TODAY / TOTAL" somewhere as text; grab TOTAL:
+    const m = svgText.match(/(\d+)\s*\/\s*(\d+)/);
+    const total = m ? m[2] : (svgText.match(/>(\d{1,3}(?:,\d{3})*)</)?.[1] || "");
+
+    out.textContent = total ? total.replace(/,/g, "") : "N/A";
+    out.style.opacity = 1; // fade in
+  })();
 </script>
 
 <!-- end of Visitor Counter Badge -->
@@ -152,6 +184,7 @@
   <script src="script.js"></script>
 </body>
 </html>
+
 
 
 
