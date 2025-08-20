@@ -2,6 +2,23 @@
 
 const products = [
 
+
+ {
+    images: ["PH19a.jpg", "PH19b.jpg", "PH19c.jpg", "PH19d.jpg", "PH19e.jpg", "PH19f.jpg"],
+    name: "#2 Donkey - Traditional Geyser, 150 L",
+    price: "N$2,500.00",
+    condition: "Showroom Quality"
+   // status: "SOLD"      // status: "SOLD"
+  },    
+  
+  
+  
+  
+  
+
+
+    
+
 {
     images: ["PH16.png"],
     name: "Decorative Hat, 75 cm diameter",
@@ -36,7 +53,7 @@ const products = [
 
 {
     images: ["PH1.jpg", "PH1a.jpg", "PH1b.jpg", "PH1c.jpg", "PH1d.jpg"],
-    name: "Donkey - Traditional Geyser, 150 L",
+    name: "#1 Donkey - Traditional Geyser, 150 L",
     price: "N$2,500.00",
     condition: "Showroom Quality",
     status: "SOLD"      // status: "SOLD"
